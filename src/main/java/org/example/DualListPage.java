@@ -24,11 +24,11 @@ public class DualListPage {
         driver.findElement(searchBox1).sendKeys(message);
     }
 
-    private final By selectButton1 = By.xpath("div[@class='dual-list list-left col-md-5']//a");
+    private final By selectButton1 = By.xpath("//div[@class='dual-list list-left col-md-5']//a");
 
     private final By addItem = By.xpath("//button[@class=\"btn btn-default btn-sm move-right\"]");
 
-    private String rightListItem = "//div[@class='dual-list list-right col-md-5']//input/following::li[text()='%s']";
+    private String rightListItem = "//div[@class='dual-list list-right col-md-5']//input/following::li[contains(text(),'%s')]";
 
     public void clickSelectBtn1(){
         driver.findElement(selectButton1).click();
